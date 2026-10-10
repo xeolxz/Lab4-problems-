@@ -30,7 +30,7 @@ public record Circle(double radius) {
 
             // Test case for invalid radius
             Circle invalidCircle = new Circle(-5.0);
-        System.out.println("Circle with radius " + invalidCircle.radius() +
+            System.out.println("Circle with radius " + invalidCircle.radius() +
                 " has area: " + invalidCircle.area() +
                 " and circumference: " + invalidCircle.circumference());
 
