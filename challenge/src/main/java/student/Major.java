@@ -90,6 +90,7 @@ public class Major {
         StringBuilder total=new StringBuilder();
         for(int i=0;i<studentCount;i++){
             total.append(students[i].toString());
+            total.append("\t");
         }
         return total;
     }

@@ -12,6 +12,12 @@ public class Instructor extends Person {
         super(prenom,nom,telephone,email);
         this.employeeNumber=employeeNumber;
     }
+    public String getEmployeeNumber(){return employeeNumber;}
+    public void setEmployeeNumber(String employeeNumber){
+        if(!employeeNumber.isBlank()){
+            this.employeeNumber=employeeNumber;
+        }
+    }
     public String cleanEmployeeNumber(){
         return employeeNumber.trim().replaceAll(" ","");
     }

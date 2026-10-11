@@ -8,6 +8,11 @@ public class Sales
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the number of sales persons you want to enter : ");
         final int SALESPEOPLE = scan.nextInt();
+        if (SALESPEOPLE <= 0) {
+            System.out.println("The number of salespeople must be positive.");
+            scan.close();
+            return;
+        }
         int[] sales = new int[SALESPEOPLE];
         for (int i=0; i<sales.length; i++)
         {
@@ -33,9 +38,9 @@ public class Sales
         maxId++;
         minId++;
         System.out.println("\nTotal sales: " + sum);
-        System.out.println("Average sales: " + sum/ sales.length);
-        System.out.println("Salesperson "+ (maxId)+" had the highest sale with "+sales[maxId-1]);
-        System.out.println("Salesperson "+ (minId)+" had the lowest sale with "+sales[minId-1]);
+        System.out.println("Average sales: " + (double) sum/ sales.length);
+        System.out.println("Salesperson "+ (maxId)+" had the highest sale with $"+sales[maxId-1]);
+        System.out.println("Salesperson "+ (minId)+" had the lowest sale with $"+sales[minId-1]);
         System.out.print("Enter a value : ");
         int value=scan.nextInt();
         int counter=0;
